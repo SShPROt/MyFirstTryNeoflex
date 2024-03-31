@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body><br>
+<form action="/" method="get">
+    <input name="salary" type="number" max="999999" placeholder="Средняя зарплата"><br><br>
+    С <input name="startVacation" type="date" value="2024-01-01">
+    До <input name="endVacation" type="date" value="2024-01-01"><br><br>
+    <button type="submit">Вычислить</button>
+</form>
+<h3 th:text="'Ваши отпускные: ' + ${result} + ' Руб.'"></h3>
+<div>
+    <div th:each="elem:${salaries}">
+        <h3 th:text="${elem.getDay()}"></h3>
+    </div>
+
+</div>
+</body>
+</html>

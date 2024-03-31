@@ -1,0 +1,225 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x00007fffa00019e9, pid=2812, tid=5764
+#
+# JRE version:  (11.0.22+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.22+7-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x19e9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:51026,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Users\vladk\AppData\Local\JetBrains\IntelliJIdea2023.3\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8 com.example.SecondTry.SecondTryApplication
+
+Host: AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  , 8 cores, 6G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Sat Mar 30 16:35:27 2024 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.3636) elapsed time: 0.076061 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x0000007848d00000,0x0000007848e00000],  sp=0x0000007848dff048,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x19e9]
+V  [jvm.dll+0x66fab3]
+V  [jvm.dll+0x66e747]
+V  [jvm.dll+0x66e2fe]
+V  [jvm.dll+0x37f932]
+V  [jvm.dll+0x794cd6]
+V  [jvm.dll+0x3f02b7]
+V  [jvm.dll+0x3f27a1]
+C  [jli.dll+0x52ef]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+siginfo: EXCEPTION_IN_PAGE_ERROR (0xc0000006), writing address 0x00000199a6bf0000
+
+
+Registers:
+RAX=0x00000199a6bf0000, RBX=0x00000199a6bf0000, RCX=0x00000199a6bf0000, RDX=0x0000000000000000
+RSP=0x0000007848dff048, RBP=0x00000199a6b23ab0, RSI=0x00000199a5161070, RDI=0x0000000000000000
+R8 =0x0000000000010000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x00000199a6bf0000
+R12=0x0000000000000000, R13=0x00007fff6a1bd720, R14=0x00000199a6b16870, R15=0x0000000000010000
+RIP=0x00007fffa00019e9, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x0000007848dff048)
+0x0000007848dff048:   00007fff6a23fab3 00000199a6b23ab0
+0x0000007848dff058:   0000019900000000 00000199a5161070
+0x0000007848dff068:   00000000000001b8 0000000000010000
+0x0000007848dff078:   0000007848dff090 0000007848dff310
+0x0000007848dff088:   0000007800000104 0000010100000103
+0x0000007848dff098:   00000199a6b23ab4 000000000000000d
+0x0000007848dff0a8:   0000000000000000 0000000000000000
+0x0000007848dff0b8:   0000000000000090 0000000000002000
+0x0000007848dff0c8:   00000199a5120000 0000000000002000
+0x0000007848dff0d8:   00007fffb58cf47e 00000199a6b21aa0
+0x0000007848dff0e8:   00007fffb58ba46c 00000000005c3a43
+0x0000007848dff0f8:   00007fffb5a1a540 ff1b0eba00000000
+0x0000007848dff108:   00000000000003ff 00000199a512c2f4
+0x0000007848dff118:   00000199a5120150 ff1b0eba00000000
+0x0000007848dff128:   00007fffb58ba36f 0000000000000000
+0x0000007848dff138:   000000004be0ae28 000000000000000d 
+
+Instructions: (pc=0x00007fffa00019e9)
+0x00007fffa00018e9:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007fffa00018f9:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007fffa0001909:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007fffa0001919:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007fffa0001929:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007fffa0001939:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007fffa0001949:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007fffa0001959:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007fffa0001969:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007fffa0001979:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007fffa0001989:   f3 aa 49 8b c3 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007fffa0001999:   1f 84 00 00 00 00 00 4c 8b d9 0f b6 d2 49 b9 01
+0x00007fffa00019a9:   01 01 01 01 01 01 01 4c 0f af ca 49 83 f8 10 0f
+0x00007fffa00019b9:   86 f2 00 00 00 66 49 0f 6e c1 66 0f 60 c0 49 81
+0x00007fffa00019c9:   f8 80 00 00 00 77 10 e9 6b 00 00 00 66 66 66 0f
+0x00007fffa00019d9:   1f 84 00 00 00 00 00 f6 05 d5 49 01 00 02 75 97
+0x00007fffa00019e9:   0f 11 01 4c 03 c1 48 83 c1 10 48 83 e1 f0 4c 2b
+0x00007fffa00019f9:   c1 4d 8b c8 49 c1 e9 07 74 3d 4c 3b 0d 1e 46 01
+0x00007fffa0001a09:   00 0f 87 60 00 00 00 0f 29 01 0f 29 41 10 48 81
+0x00007fffa0001a19:   c1 80 00 00 00 0f 29 41 a0 0f 29 41 b0 49 ff c9
+0x00007fffa0001a29:   0f 29 41 c0 0f 29 41 d0 0f 29 41 e0 66 0f 29 41
+0x00007fffa0001a39:   f0 75 d4 49 83 e0 7f 4d 8b c8 49 c1 e9 04 74 13
+0x00007fffa0001a49:   0f 1f 80 00 00 00 00 0f 11 01 48 83 c1 10 49 ff
+0x00007fffa0001a59:   c9 75 f4 49 83 e0 0f 74 06 42 0f 11 44 01 f0 49
+0x00007fffa0001a69:   8b c3 c3 0f 1f 40 00 0f 2b 01 0f 2b 41 10 48 81
+0x00007fffa0001a79:   c1 80 00 00 00 0f 2b 41 a0 0f 2b 41 b0 49 ff c9
+0x00007fffa0001a89:   0f 2b 41 c0 0f 2b 41 d0 0f 2b 41 e0 0f 2b 41 f0
+0x00007fffa0001a99:   75 d5 0f ae f8 49 83 e0 7f eb 9c 66 66 66 66 0f
+0x00007fffa0001aa9:   1f 84 00 00 00 00 00 49 8b d1 4c 8d 0d 46 e5 ff
+0x00007fffa0001ab9:   ff 43 8b 84 81 b0 80 01 00 4c 03 c8 49 03 c8 49
+0x00007fffa0001ac9:   8b c3 41 ff e1 66 90 48 89 51 f1 89 51 f9 66 89
+0x00007fffa0001ad9:   51 fd 88 51 ff c3 90 48 89 51 f4 89 51 fc c3 48 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff6a383ad7]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7ebc20000 - 0x00007ff7ebc2e000 	D:\Work2\JavaJDK\JDK11\bin\java.exe
+0x00007fffb58b0000 - 0x00007fffb5aa8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffb4470000 - 0x00007fffb452d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffb34f0000 - 0x00007fffb37e6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffb3240000 - 0x00007fffb3340000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffa0000000 - 0x00007fffa001b000 	D:\Work2\JavaJDK\JDK11\bin\VCRUNTIME140.dll
+0x00007fff9fd60000 - 0x00007fff9fd77000 	D:\Work2\JavaJDK\JDK11\bin\jli.dll
+0x00007fffb4710000 - 0x00007fffb48ae000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffb38c0000 - 0x00007fffb38e2000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffa47c0000 - 0x00007fffa4a5a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007fffb5470000 - 0x00007fffb549b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffb57d0000 - 0x00007fffb586e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffb33d0000 - 0x00007fffb34e7000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffb37f0000 - 0x00007fffb388d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffb5360000 - 0x00007fffb5392000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000059ad0000 - 0x0000000059adc000 	C:\Program Files (x86)\360\Total Security\safemon\SafeWrapper.dll
+0x00007fffb4530000 - 0x00007fffb45e3000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffb4f60000 - 0x00007fffb4fff000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffb41b0000 - 0x00007fffb42d6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffb3890000 - 0x00007fffb38b7000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fff80fb0000 - 0x00007fff81042000 	C:\Program Files (x86)\360\Total Security\safemon\libzdtp64.dll
+0x00007fffb3a60000 - 0x00007fffb41a5000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fffb4df0000 - 0x00007fffb4e45000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007fffb2a00000 - 0x00007fffb2a0a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffa8700000 - 0x00007fffa870c000 	D:\Work2\JavaJDK\JDK11\bin\vcruntime140_1.dll
+0x00007fff80f20000 - 0x00007fff80fad000 	D:\Work2\JavaJDK\JDK11\bin\msvcp140.dll
+0x00007fff69bd0000 - 0x00007fff6a793000 	D:\Work2\JavaJDK\JDK11\bin\server\jvm.dll
+0x00007fffb4e50000 - 0x00007fffb4e58000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff88430000 - 0x00007fff88439000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffb16e0000 - 0x00007fffb1707000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffb5400000 - 0x00007fffb546b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffb1770000 - 0x00007fffb1782000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffa7f10000 - 0x00007fffa7f20000 	D:\Work2\JavaJDK\JDK11\bin\verify.dll
+0x00007fffb1270000 - 0x00007fffb1454000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffadf20000 - 0x00007fffadf54000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffb3340000 - 0x00007fffb33c2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff9f930000 - 0x00007fff9f958000 	D:\Work2\JavaJDK\JDK11\bin\java.dll
+0x00007fffa4760000 - 0x00007fffa476a000 	D:\Work2\JavaJDK\JDK11\bin\jimage.dll
+0x00007fff95600000 - 0x00007fff95639000 	D:\Work2\JavaJDK\JDK11\bin\jdwp.dll
+0x00007fffa28e0000 - 0x00007fffa28ee000 	D:\Work2\JavaJDK\JDK11\bin\instrument.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Work2\JavaJDK\JDK11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Program Files (x86)\360\Total Security\safemon;D:\Work2\JavaJDK\JDK11\bin\server
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:51026,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Users\vladk\AppData\Local\JetBrains\IntelliJIdea2023.3\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8 
+java_command: com.example.SecondTry.SecondTryApplication
+java_class_path (initial): D:\Work2\JavaProj\SecondTry\target\classes;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\2.7.1\spring-boot-starter-thymeleaf-2.7.1.jar;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.1\spring-boot-starter-2.7.1.jar;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot\2.7.1\spring-boot-2.7.1.jar;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.1\spring-boot-autoconfigure-2.7.1.jar;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.1\spring-boot-starter-logging-2.7.1.jar;C:\Users\vladk\.m2\repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar;C:\Users\vladk\.m2\repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar;C:\Users\vladk\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;C:\Users\vladk\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\vladk\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;C:\Users\vladk\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\vladk\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;C:\Users\vladk\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.15.RELEASE\thymeleaf-spring5-3.0.15.RELEASE.jar;C:\Users\vladk\.m2\repository\org\thymeleaf\thymeleaf\3.0.15.RELEASE\thymeleaf-3.0.15.RELEASE.jar;C:\Users\vladk\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\vladk\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\vladk\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\vladk\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\vladk\.m2\repository\org\springframework\boot\spring-boot-star
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 116385984                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MaxHeapSize                              = 1862175744                                {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-19
+PATH=C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Work\Git\cmd;D:\Work\Xilinx\bin\nt64;C:\Program Files (x86)\dotnet\;D:\Work2\Matlab\runtime\win64;D:\Work2\Matlab\bin;C:\Program Files\Java\jdk-19\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft Network Monitor 3\;D:\Work2\NodeJS\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Windows\System32;D:\Work2\MySQL\MySQLShell\bin\;C:\Users\vladk\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\vladk\AppData\Local\Programs\Python\Python311\;C:\Users\vladk\AppData\Local\Microsoft\WindowsApps;C:\Users\vladk\.dotnet\tools;D:\Work\Microsoft VS Code\bin;C:\Users\vladk\AppData\Roaming\npm;C:\Windows\System32;
+USERNAME=vladk
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+TMP=C:\Users\vladk\AppData\Local\Temp
+TEMP=C:\Users\vladk\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 5 days 23:26 hours
+
+CPU:total 8 (initial active 8) 
+
+Memory: 4k page, system-wide physical 7103M (1269M free)
+TotalPageFile size 15807M (AvailPageFile size 4203M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 4M, peak: 4M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.22+7-LTS) for windows-amd64 JRE (11.0.22+7-LTS), built on Jan 10 2024 19:54:00 by "Administrator" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
